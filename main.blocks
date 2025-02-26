@@ -1,0 +1,125 @@
+<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable id="10vmnax@qMzz,NCADeTu">text_list</variable><variable id="7UD+?$}[F3Nu3Xz(~jiF">str2</variable><variable id=";UKN;0I4w*FBQ-|7$SnK">Cat_Image</variable><variable id="^3P~NE0ftNYq|d|N^93G">Dog_Image</variable><variable id="4rQU:n49rKfxS.fd_La?">Egg_Image</variable><variable id="FXeuY2GF,+yNydIiJT_A">item</variable><variable id="}V0Zd%-=2O[CR,_e?V!,">Ducks</variable></variables><comment id="3aZ_]7X*V+KrD[e))-$7" x="-13" y="-499" w="723" h="465">Button A 
+
+When the button is pressed the rotateDuck function is called.
+
+rotateDuck rotates a duck on the leds in the order below.
+The function takes in a number, this number tells the function how many times to call the animation. 
+It should only do ***exactly*** that number of animations. 
+
+Whoever coded this button left a bunch of bugs in the code. Using the description of the code and the expected output find and fix the bugs.
+
+Key:
+ # --&gt; on
+ . --&gt; off
+
+Expected Output:
+ . . . . .       . . # . .       . # # # .       . . . . .
+ . # # . .       # # # # .       # # # # .       . # # . .
+ # # # . .  --&gt;  # # # # .  --&gt;  . . # # #  --&gt;  # # # . .
+ . # # # #       # # . . .       . . # # .       . # # # #
+ . # # # .       . # . . .       . . . . .       . # # # .
+
+</comment><comment id="}RGfxwe]$,y(5bP0{liV" x="885" y="-420" w="548" h="398">Button B 
+
+When the button is pressed the variable "item" is set to a random number between 0 and 3 (i.e. 0, 1, 2, 3). 
+
+Expected output:
+If item is set to 0 show a heart icon.
+
+If item is set to 1 show the word "Hello"
+
+If item is set to 2 call the rotateDuck function once
+
+If item is set to 3 show a smiling face. 
+
+Whoever coded this button left a bunch of bugs in the code. Using the description of the code and the expected output find and fix the bugs.</comment><comment id="fkS|58D#|-A??u0a!A1E" x="1618" y="-294" w="1120" h="212">Extending Debugging: 
+
+When the microbit turns on a list is created with four animals and images are created to repsrent them. 
+
+**Do not change the text_list or images**
+
+When Pin 0 is pressed each of the images will show on the LEDs. However whoever coded this must have been in a big rush because none of the images match up correctly. Fix the code so the correct images show with the right animal names.
+
+</comment><comment id="QXfdw%r%jnoqUpwg`QI3" x="644" y="-1005" w="1188" h="347">Debugging Challenge
+
+There is code for the A and B buttons that have issues running correctly.
+ 
+You need to fix the each to have the expected output. The expected output is in each of the comments above the code snippets that you'll be working with.
+
+You must complete Button A and Button B. There is an OPTIONAL extension for Pin 0 that is a bit more challenging.
+
+Tips and Tricks: 
+- Use the expected outputs to identify what parts of the output are wrong.
+- Bugs are often small mistakes in code.
+- Statements in loops and conditionals are often the causes.
+</comment><block type="device_button_event" id="3iqobcPt=*=#j[e;HF4." x="0" y="0"><field name="NAME">Button.A</field><comment pinned="false" h="80" w="160">Button A:
+
+When pressed the rotateDuck function is called. The function will rotate the around the screen. The duck starts facing the left, then roates pointing up, then rotates pointing to the right, and finishes where it starts.
+
+There is a bug in the code, find it and fix it so the output is correct!
+
+Key:
+
+# --&gt; on
+
+. --&gt; off
+
+. . . . .       . . # . .       . # # # .       . . . . .
+
+. # # . .       # # # # .       # # # # .       . # # . .
+
+# # # . .  --&gt;  # # # # .  --&gt;  . . # # #  --&gt;  # # # . .
+
+. # # # #       # # . . .       . . # # .       . # # # #
+
+. # # # .       . # . . .       . . . . .       . # # # .
+
+-------------------------------------------------------------</comment><statement name="HANDLER"><block type="function_call" id="H/h:u(:Vaf7C}}:Hxd2A"><mutation name="rotateDuck" functionid="!108)irFp*PBl#*%cxF@"><arg name="num" id="5g8k89qmvw61jl8p9k629" type="number"></arg></mutation><value name="5g8k89qmvw61jl8p9k629"><shadow type="math_number" id="KF(N)%ZX=UWe8ghAar/!"><field name="NUM">5</field></shadow></value></block></statement></block><block type="function_definition" id="h/mc*gY|Qx?naPAUUHyh" x="328" y="-9"><mutation name="rotateDuck" functionid="!108)irFp*PBl#*%cxF@"><arg name="num" id="5g8k89qmvw61jl8p9k629" type="number"></arg></mutation><field name="function_name">rotateDuck</field><value name="5g8k89qmvw61jl8p9k629"><block type="argument_reporter_number" id="VIBdn*HBA80-#O1#d4/7"><mutation duplicateondrag="true"></mutation><field name="VALUE">num</field></block></value><statement name="STACK"><block type="controls_repeat_ext" id="zD%V994QRD[VBMOwY(.{"><value name="TIMES"><shadow type="math_whole_number" id="6XaLXBPqLw{hr+=0DN:+"><field name="NUM">4</field></shadow></value><statement name="DO"><block type="device_show_leds" id="Pta^/m3]-pzAwP9Rg6/("><field name="LEDS">`
+        . . . . . 
+        . # # . . 
+        # # # . . 
+        . # # # # 
+        . # # # .
+        `</field><next><block type="device_show_leds" id="f6mTgFr1/!zpkbiEAt2,"><field name="LEDS">`
+        . . # . . 
+        # # # # . 
+        # # # # . 
+        # # . . . 
+        . # . . .
+        `</field><next><block type="device_show_leds" id="E,`O7jXg4JLN(;Z^e,]g"><field name="LEDS">`
+        . . . . . 
+        . # # # . 
+        # # # # . 
+        . . # # # 
+        . . # # .
+        `</field><next><block type="device_show_leds" id="V*JQmiuH_Je)a]$4-RY%"><field name="LEDS">`
+        . . . . . 
+        . . . . . 
+        . . # . . 
+        . . . . . 
+        . . . . .
+        `</field></block></next></block></next></block></next></block></statement></block></statement></block><block type="device_pin_event" id="@6H:svde@J~(UDJ#W6Lz" x="1623" y="-37"><field name="name">TouchPin.P0</field><statement name="HANDLER"><block type="pxt_controls_for_of" id="t[WCFs3[)h.kzn^t-qty"><value name="VAR"><block type="variables_get_reporter" id="z#BdO4z6CeJ8j:}66?+:"><mutation duplicateondrag="true"></mutation><field name="VAR" id="7UD+?$}[F3Nu3Xz(~jiF">str2</field></block></value><value name="LIST"><block type="variables_get" id="-#rPOL%HMJ*mhnryRnD."><field name="VAR" id="10vmnax@qMzz,NCADeTu">text_list</field></block></value><statement name="DO"><block type="controls_if" id="4dvG[##=3x|0FWS[,Gj7"><mutation elseif="2" else="1"></mutation><value name="IF0"><shadow type="logic_boolean" id="IwkGCaW9SqvoA890$wO9"><field name="BOOL">TRUE</field></shadow><block type="logic_compare" id="DqY1k#l;ah-9QKQdKg*O"><field name="OP">EQ</field><value name="A"><shadow type="math_number" id="MAp2UQ.YyZSs+3$dPZqE"><field name="NUM">0</field></shadow><block type="variables_get" id="|5(+ZZ+}q}CjR-5)CAMw"><field name="VAR" id="7UD+?$}[F3Nu3Xz(~jiF">str2</field></block></value><value name="B"><shadow type="math_number" id="o-w(hOijff?aM?*]/gw4"><field name="NUM">0</field></shadow><block type="text" id="#MA%JZGdI2Isf=iX{Hf+"><field name="TEXT">Dog</field></block></value></block></value><statement name="DO0"><block type="device_print_message" id="bjsqJz*bcSJ]quqFEfF}"><value name="text"><shadow type="text" id="E.)A-D1jk$qG/[_4@^1B"><field name="TEXT">Hello!</field></shadow><block type="variables_get" id="XdGpHRI9]zY0@quhpqKU"><field name="VAR" id="7UD+?$}[F3Nu3Xz(~jiF">str2</field></block></value><next><block type="device_scroll_image" id="OVnTR]h.rMTE9sP_z8i9"><value name="sprite"><block type="variables_get" id="N(];WxcyQrM8^O`t@qgs"><field name="VAR" id=";UKN;0I4w*FBQ-|7$SnK">Cat_Image</field></block></value><value name="frameoffset"><shadow type="math_number" id="uDX/u5W^JW}l-Ob`ae=9"><field name="NUM">1</field></shadow></value><value name="delay"><shadow type="math_number" id="6AHCb5qo|jCd)yARRlZD"><field name="NUM">200</field></shadow></value></block></next></block></statement><value name="IF1"><shadow type="logic_boolean" id="Sylx/S$Ts#},XS36qy_v"><field name="BOOL">TRUE</field></shadow><block type="logic_compare" id="vDI)h_DrWjU;Z)XRxbs?"><field name="OP">EQ</field><value name="A"><shadow type="math_number" id="l;Y}.xL-7#HvG63f;7N+"><field name="NUM">0</field></shadow><block type="variables_get" id="[`Q8w%4hHOQWz|i*3LiE"><field name="VAR" id="7UD+?$}[F3Nu3Xz(~jiF">str2</field></block></value><value name="B"><shadow type="math_number" id="cM2.%ES]1X3?@|Samu]v"><field name="NUM">0</field></shadow><block type="text" id="M6K=k3~]mMX.5CR(+A~n"><field name="TEXT">Egg</field></block></value></block></value><statement name="DO1"><block type="device_print_message" id="TM4#H(WQa*7XuD)6QT!n"><value name="text"><shadow type="text" id="2KY3)d`56EuuH4~b26=D"><field name="TEXT">Hello!</field></shadow><block type="variables_get" id="8d6`ZT;+rv4LU:2|k^`M"><field name="VAR" id="7UD+?$}[F3Nu3Xz(~jiF">str2</field></block></value><next><block type="device_scroll_image" id="W+y#.(Lu=k:i18.=6_x5"><value name="sprite"><block type="variables_get" id="}!w$#1xI:D2=}f|%ZkvV"><field name="VAR" id="^3P~NE0ftNYq|d|N^93G">Dog_Image</field></block></value><value name="frameoffset"><shadow type="math_number" id="{5[13*wW.w7ZKn89#L*g"><field name="NUM">1</field></shadow></value><value name="delay"><shadow type="math_number" id="~mG[)zOd:$/9mW@Wr$?9"><field name="NUM">200</field></shadow></value></block></next></block></statement><value name="IF2"><shadow type="logic_boolean" id="k~:69#:*kf]=Ybc*{SK5"><field name="BOOL">TRUE</field></shadow><block type="logic_compare" id="@fWhK!+qHB|9F#j%f:[Q"><field name="OP">EQ</field><value name="A"><shadow type="math_number" id="o:;w,[2Bx:%D;LkXT/R8"><field name="NUM">0</field></shadow><block type="variables_get" id="nEhl*!bd0,lekzM1-v-+"><field name="VAR" id="7UD+?$}[F3Nu3Xz(~jiF">str2</field></block></value><value name="B"><shadow type="math_number" id="RbO:+$8oh$HY{fw0j0Fo"><field name="NUM">0</field></shadow><block type="text" id="$rGpe,?9J0;TvF1KFLMM"><field name="TEXT">Egg</field></block></value></block></value><statement name="DO2"><block type="device_print_message" id="+_g!?Y/4v28W328po9TE"><value name="text"><shadow type="text" id="Mr1.`mN]bF6hKTW,xjnc"><field name="TEXT">Hello!</field></shadow><block type="variables_get" id="e$i?OlktEH2lBPDa}8sq"><field name="VAR" id="7UD+?$}[F3Nu3Xz(~jiF">str2</field></block></value><next><block type="device_scroll_image" id=",-Qs~_`xj[{Qr3nj-v7/"><value name="sprite"><block type="variables_get" id="rJh7yxiOhZILsx7pRG=l"><field name="VAR" id="4rQU:n49rKfxS.fd_La?">Egg_Image</field></block></value><value name="frameoffset"><shadow type="math_number" id="1kiJPd%p]!Yvvn3Z:Az["><field name="NUM">1</field></shadow></value><value name="delay"><shadow type="math_number" id="(2%P9qt%88`oQf-xIVC1"><field name="NUM">200</field></shadow></value></block></next></block></statement><statement name="ELSE"><block type="device_print_message" id="Bmga.BxbdGh?~$)6uwf}"><value name="text"><shadow type="text" id="kFvxGY%Q_/${.nz8{Y}b"><field name="TEXT">Hello!</field></shadow><block type="variables_get" id="09g|B`L!PDcw:pgI3GET"><field name="VAR" id="7UD+?$}[F3Nu3Xz(~jiF">str2</field></block></value><next><block type="basic_show_icon" id=")e-U/sBSg.N_O#w()ctK"><field name="i">IconNames.Heart</field></block></next></block></statement></block></statement></block></statement></block><block type="device_button_event" id="({lBCD.A_F1b0;UQQaf*" x="896" y="9"><field name="NAME">Button.B</field><statement name="HANDLER"><block type="variables_set" id="MlOJTZtj`ZI9(A]XxA+0"><field name="VAR" id="FXeuY2GF,+yNydIiJT_A">item</field><value name="VALUE"><shadow type="math_number" id="s#Txqx^Lk3y=5BK3XCWP"><field name="NUM">0</field></shadow><block type="device_random" id="(UKI$Py**xX8uc#0KJat"><value name="min"><shadow type="math_number" id=":Q^Y;JioS*+4uUV?U[/."><field name="NUM">0</field></shadow></value><value name="limit"><shadow type="math_number" id="|(2/3e|J/W`7^gS?P:DP"><field name="NUM">2</field></shadow></value></block></value><next><block type="controls_if" id="Y/%q7?#R[{?BmDj$N84C"><mutation elseif="3" else="1"></mutation><value name="IF0"><shadow type="logic_boolean" id="%EIT8W]v3Q+tD]yPe`vQ"><field name="BOOL">TRUE</field></shadow><block type="logic_compare" id="@W#DA^8hN|Y#Y[_H,:2P"><field name="OP">EQ</field><value name="A"><shadow type="math_number" id="Z77RlRB*y#$S4U0!ox^}"><field name="NUM">0</field></shadow><block type="variables_get" id="HZCD$$@zWg:Qt2@h+k82"><field name="VAR" id="FXeuY2GF,+yNydIiJT_A">item</field></block></value><value name="B"><shadow type="math_number" id="C+*zPF6lqNt743%Pyi[q"><field name="NUM">0</field></shadow></value></block></value><statement name="DO0"><block type="function_call" id="8yr;UP|fbwGQ(7UKYCd|"><mutation name="rotateDuck" functionid="!108)irFp*PBl#*%cxF@"><arg name="num" id="5g8k89qmvw61jl8p9k629" type="number"></arg></mutation><value name="5g8k89qmvw61jl8p9k629"><shadow type="math_number" id="oo=u`?)^It%B054OXc)y"><field name="NUM">1</field></shadow></value></block></statement><value name="IF1"><shadow type="logic_boolean" id="6=p=V,pD^zb*5oV.YI^U"><field name="BOOL">TRUE</field></shadow><block type="logic_compare" id="8PnHOdL3Rl{tmGoQ(F*}"><field name="OP">EQ</field><value name="A"><shadow type="math_number" id=")1)l70]b8~OxihXXXZwL"><field name="NUM">0</field></shadow><block type="variables_get" id="IN`{*xUHZ]^(C=*)2mXC"><field name="VAR" id="FXeuY2GF,+yNydIiJT_A">item</field></block></value><value name="B"><shadow type="math_number" id="I?$Sm}w8BrqwvX~!u(0D"><field name="NUM">1</field></shadow></value></block></value><statement name="DO1"><block type="device_print_message" id="*/e$KWl^Wy#egm[c9c,%"><value name="text"><shadow type="text" id="F;UsHRIF4jBDs6^fi/Pd"><field name="TEXT">B</field></shadow></value></block></statement><value name="IF2"><shadow type="logic_boolean" id="(QlC[rsuYKy*(B^~[wy*"><field name="BOOL">TRUE</field></shadow><block type="logic_compare" id="hwcx){O6qSSNS|E7*z+s"><field name="OP">EQ</field><value name="A"><shadow type="math_number" id="=n1SMW$::u5:fpT_p^Ky"><field name="NUM">0</field></shadow><block type="variables_get" id="#*Q4ez7}uUegGS3,6z{s"><field name="VAR" id="FXeuY2GF,+yNydIiJT_A">item</field></block></value><value name="B"><shadow type="math_number" id="`cwk~okS(#?xZS]UZk9i"><field name="NUM">2</field></shadow></value></block></value><statement name="DO2"><block type="basic_show_icon" id="YTV)Qj5(:wGZFno%SzR5"><field name="i">IconNames.Duck</field></block></statement><value name="IF3"><shadow type="logic_boolean" id="X=@*K)x;o3^$^8jqlWG4"><field name="BOOL">FALSE</field></shadow></value><statement name="DO3"><block type="device_print_message" id="42JnT1Y,iUR^B5c2ZWPn"><value name="text"><shadow type="text" id="[;6CUD7V[%ME?:O(V#*7"><field name="TEXT">D</field></shadow></value></block></statement></block></next></block></statement></block><block type="pxt-on-start" id=":!m40YVZyM,P`ggbr`lb" x="2363" y="-34"><statement name="HANDLER"><block type="variables_set" id="7w8?!cU1rV45cw@j#@xi"><field name="VAR" id="10vmnax@qMzz,NCADeTu">text_list</field><value name="VALUE"><shadow type="math_number" id="peccLavykPgXPI-U2?7H"><field name="NUM">0</field></shadow><block type="lists_create_with" id="C#Kqo|.[Ns^hAvXWsW8Z" inline="false"><mutation items="4" horizontalafter="3"></mutation><value name="ADD0"><shadow type="text" id="c@h6vNHt)JA=~WXU=bFD"><field name="TEXT">Duck</field></shadow></value><value name="ADD1"><shadow type="text" id="3=jD,?n#x;mb}Mi(]gVr"><field name="TEXT">Cat</field></shadow></value><value name="ADD2"><shadow type="text" id="K}E+K?Ko{P/NrI#DF`sG"><field name="TEXT">Dog</field></shadow></value><value name="ADD3"><shadow type="text" id="~Xe|Pj,R[;M-%hZmm+{x"><field name="TEXT">Egg</field></shadow></value></block></value><next><block type="variables_set" id="FOeeJf!QWZ(GOz_aPEYu"><field name="VAR" id=";UKN;0I4w*FBQ-|7$SnK">Cat_Image</field><value name="VALUE"><shadow type="math_number" id="Qag+mN9Aip)%7J7L39LL"><field name="NUM">0</field></shadow><block type="device_build_big_image" id="~T{Q14,Fi$7J6L5A@G$k"><field name="LEDS">`
+        . # . # . . . . . # 
+        . # # # . . . . # # 
+        . # # # # # # # # . 
+        . . # # # # # . . . 
+        . . . # . . # . . .
+        `</field></block></value><next><block type="variables_set" id="hMtQ6pt/[DE9#}W?TLQp"><field name="VAR" id="^3P~NE0ftNYq|d|N^93G">Dog_Image</field><value name="VALUE"><shadow type="math_number" id="uHZ|7bPqvC!nC@KyWs;U"><field name="NUM">0</field></shadow><block type="device_build_big_image" id="6A%^re-5D,oi`M{~DWC4"><field name="LEDS">`
+        . . # # . . . . . . 
+        . # # # . . . . # . 
+        . . # # # # # # # . 
+        . . # # # # # . . . 
+        . # # . . # # . . .
+        `</field></block></value><next><block type="variables_set" id="w:fVK(LE-L%=oN*eT0Z="><field name="VAR" id="}V0Zd%-=2O[CR,_e?V!,">Ducks</field><value name="VALUE"><shadow type="math_number" id="7wap15/2-*PEB,M-Btg;"><field name="NUM">0</field></shadow><block type="device_build_big_image" id="kk3E8YK~.uT#t8x_E`ji"><field name="LEDS">`
+        . # # . . . # # . . 
+        # # # . . # # # . . 
+        . # # # # . # # # # 
+        . # # # . . # # # . 
+        . . . . . . . . . .
+        `</field></block></value><next><block type="variables_set" id="N)Y24hHJW6qea6]TH7(*"><field name="VAR" id="4rQU:n49rKfxS.fd_La?">Egg_Image</field><value name="VALUE"><shadow type="math_number" id="J6jykB}++Z06SR31WLD|"><field name="NUM">0</field></shadow><block type="device_build_big_image" id="H;f1Kd#UO6-2jGtH)B)C"><field name="LEDS">`
+        . . . . # . . . . . 
+        . . . # # # . . . . 
+        . . # # # # # . . . 
+        . . # # # # # . . . 
+        . . . # # # . . . .
+        `</field></block></value></block></next></block></next></block></next></block></next></block></statement></block></xml>
